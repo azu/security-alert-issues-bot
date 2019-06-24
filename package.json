@@ -13,40 +13,36 @@
     "probot-app"
   ],
   "scripts": {
-    "dev": "nodemon",
-    "start": "probot run ./index.js",
-    "lint": "standard --fix",
-    "test": "jest && standard",
+    "build": "tsc -p tsconfig.json",
+    "dev": "nodemon --exec \"npm start\"",
+    "start": "probot run ./lib/index.js",
+    "lint": "standard **/*.ts --fix",
+    "test": "jest && standard **/*.ts",
     "test:watch": "jest --watch --notify --notifyMode=change --coverage",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\""
   },
   "dependencies": {
-    "probot": "^7.2.0"
+    "@types/nock": "^9.3.0",
+    "lodash": "^4.17.11",
+    "nock": "^10.0.0",
+    "probot": "^7.2.0",
+    "probot-config": "^1.0.1"
   },
   "devDependencies": {
+    "@types/jest": "^24.0.0",
+    "@types/lodash": "^4.14.134",
+    "@types/node": "^11.9.0",
     "husky": "^2.4.1",
     "jest": "^24.0.0",
     "lint-staged": "^8.2.1",
-    "nock": "^10.0.0",
     "nodemon": "^1.17.2",
     "prettier": "^1.18.2",
     "smee-client": "^1.0.2",
-    "standard": "^12.0.1"
+    "ts-jest": "^24.0.0",
+    "typescript": "^3.3.1"
   },
   "engines": {
     "node": ">= 8.3.0"
-  },
-  "standard": {
-    "env": [
-      "jest"
-    ]
-  },
-  "nodemonConfig": {
-    "exec": "npm start",
-    "watch": [
-      ".env",
-      "."
-    ]
   },
   "jest": {
     "testEnvironment": "node"

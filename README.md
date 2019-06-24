@@ -2,25 +2,14 @@
 
 > A GitHub App built with [Probot](https://github.com/probot/probot) that [Probot] Sync GitHub Security Alerts and GitHub Issues.
 
-## Features
-
-Sync Security Alerts and Issues.
-
-### Security Alert -> Issue
-
-- Receive new [security alert](https://help.github.com/en/articles/about-security-alerts-for-vulnerable-dependencies#about-security-vulnerabilities) and Create new issue.
-- Resolve security alert and Close the issue
-
-### Issue -> Security Alert
-
-- Close Issue and Resolve Security Alert
-- Re-Open Issue and Unresolve Security Alert
-
 ## Setup
 
 ```sh
 # Install dependencies
 npm install
+
+# Run typescript
+npm run build
 
 # Run the bot
 npm start
@@ -35,3 +24,8 @@ For more, check out the [Contributing Guide](CONTRIBUTING.md).
 ## License
 
 [ISC](LICENSE) © 2019 azu <azuciao@gmail.com>
+
+
+## See also
+
+- [phstc/probot-security-alerts: Auto file issues for GitHub security alerts](https://github.com/topics/security)
