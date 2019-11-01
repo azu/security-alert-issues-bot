@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@types/nock": "^9.3.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.13",
     "nock": "^10.0.0",
     "probot": "^7.2.0",
     "probot-config": "^1.0.1"
